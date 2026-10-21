@@ -1,0 +1,127 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+:root {
+  --ink: #0f172a;
+  --forest: #047857;
+  --mint: #f8fafc;
+  --lime: #10b981;
+  --line: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.shell {
+  width: min(1140px, calc(100% - 32px));
+  margin: auto;
+}
+
+/* Glassmorphism light utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Flowing Market Grid Animations */
+@keyframes flow-grid {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-40px, -40px); }
+}
+
+@keyframes wave-float {
+  0% { transform: translateX(0) scaleY(1); }
+  50% { transform: translateX(-25%) scaleY(1.08); }
+  100% { transform: translateX(-50%) scaleY(1); }
+}
+
+@keyframes particle-drift {
+  0% { transform: translateY(0) scale(1); opacity: 0.3; }
+  50% { transform: translateY(-30px) scale(1.15); opacity: 0.7; }
+  100% { transform: translateY(0) scale(1); opacity: 0.3; }
+}
+
+/* Organic Tree Sway & Gentle Breathing */
+@keyframes tree-sway {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  30% {
+    transform: rotate(0.8deg) scale(1.01);
+  }
+  65% {
+    transform: rotate(-0.6deg) scale(1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+/* Gentle Leaves Shimmer / Sunbeams Breathing */
+@keyframes sun-shimmer {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+/* Floating Coin / Milestone Bobbing */
+@keyframes float-chip {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-flow-grid {
+  animation: flow-grid 24s linear infinite;
+}
+
+.animate-wave-flow {
+  animation: wave-float 18s ease-in-out infinite;
+}
+
+.animate-particle-drift {
+  animation: particle-drift 8s ease-in-out infinite;
+}
+
+.animate-tree-sway {
+  transform-origin: bottom center;
+  animation: tree-sway 7s ease-in-out infinite;
+}
+
+.animate-sun-shimmer {
+  animation: sun-shimmer 5s ease-in-out infinite;
+}
+
+.animate-float-chip {
+  animation: float-chip 4s ease-in-out infinite;
+}
